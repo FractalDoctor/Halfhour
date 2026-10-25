@@ -75,12 +75,12 @@
         <div class="formula">price = (wholesale, capped at 50c + base rate) × 1.09</div>
         <p>A daily standing charge comes on top, whatever you use. The wholesale part has no floor, so a price below zero takes money off your bill.</p>
         <h3>Where the wholesale price comes from</h3>
-        <p>Each morning the power exchange for the island of Ireland, SEMOpx, holds an auction for every half hour of the next day. The results are published around midday, which is when tomorrow fills in. Halfhour reads them from SEMOpx's public reports on your phone.</p>
+        <p>Each morning the power exchange for the island of Ireland, SEMOpx, holds an auction for every half hour of the next day. The results are published around midday, which is when tomorrow fills in. Day-ahead prices are published openly by SEMOpx, the power exchange for the island of Ireland, and are free to view without an account. Halfhour reads them from SEMOpx's public reports on your phone.</p>
         <p>The market's day runs from 23:00 to 23:00 Irish time, so the first rows of tomorrow are tonight, from 23:00.</p>
         <h3>Why prices swing</h3>
         <p>Wind costs almost nothing to run once it is built, while gas plants pay for fuel and carbon. When it is windy and demand is low, prices fall towards zero. When the wind drops, or demand peaks in the evening, gas sets the price and it climbs. Halfhour shows EirGrid's wind figures beside the prices so you can see the two together.</p>
         <h3>Supplier rates</h3>
-        <p>Each supplier's base rates and standing charges come from its own published price list. They are kept in a rates file published on this site, described <a href="#rates">below</a>, so a supplier's change reaches the app without an app update.</p>
+        <p>Supplier rates are taken from each supplier's own published price list and checked before each update. They are kept in a rates file published on this site, described <a href="#rates">below</a>, so a supplier's change reaches the app without an app update.</p>
     </section>
 
     <section id="use">
@@ -118,7 +118,7 @@
         <h2>The rates file</h2>
         <p>The supplier rates Halfhour uses are published as a single JSON file:</p>
         <p><a href="tariffs.json"><code>https://fractaldoctor.github.io/Halfhour/tariffs.json</code></a></p>
-        <p>The figures are taken from each supplier's own published price list, linked from the file, and updated when a supplier changes its prices. Halfhour checks for a newer file every few hours. It uses a file only if it reads correctly and its figures are plausible, and falls back to the rates built into the app if this site cannot be reached.</p>
+        <p>The figures are taken from each supplier's own published price list, linked from the file, checked before each update, and updated when a supplier changes its prices. Halfhour checks for a newer file every few hours. It uses a file only if it reads correctly and its figures are plausible, and falls back to the rates built into the app if this site cannot be reached.</p>
         <h3>What it holds</h3>
         <table>
             <tr><th>Field</th><th>Meaning</th></tr>
