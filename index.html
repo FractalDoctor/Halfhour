@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halfhour - Irish Dynamic Electricity Prices</title>
+    <style>
+        :root {
+            --page: #F3F5F4; --card: #FFFFFF; --ink: #2E3A40; --soft: #5E6B72; --accent: #1F5F8B; --rule: #D9DFE2;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { --page: #1C1C1E; --card: #2C2C2E; --ink: #D9DFE2; --soft: #9AA5AB; --accent: #5B9BD5; --rule: #3A3A3C; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--page); color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px; line-height: 1.55; padding: 32px 20px 48px; max-width: 760px; margin: 0 auto;
+        }
+        header { text-align: center; padding-bottom: 24px; }
+        h1 { font-size: 30px; letter-spacing: 0.5px; }
+        h1 span { color: var(--accent); }
+        .tagline { color: var(--soft); font-size: 16px; margin-top: 4px; }
+        nav { text-align: center; font-size: 14px; margin-bottom: 24px; }
+        nav a { margin: 0 8px; }
+        section { background: var(--card); border-radius: 16px; padding: 20px 22px; margin-bottom: 16px; }
+        h2 { font-size: 19px; margin-bottom: 10px; }
+        h3 { font-size: 16px; margin: 14px 0 4px; }
+        p { margin-bottom: 10px; }
+        ul { margin: 0 0 10px 20px; }
+        li { margin-bottom: 4px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { font-family: "SF Mono", Menlo, monospace; font-size: 14px; background: var(--page); padding: 1px 5px; border-radius: 4px; }
+        .formula { font-family: "SF Mono", Menlo, monospace; font-size: 15px; background: var(--page); padding: 10px 12px; border-radius: 8px; margin-bottom: 10px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 10px; }
+        th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+        th { color: var(--soft); font-weight: 600; }
+        .note { color: var(--soft); font-size: 14px; }
+        footer { text-align: center; color: var(--soft); font-size: 13px; margin-top: 24px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Half<span>hour</span></h1>
+        <div class="tagline">Irish dynamic electricity prices, half hour by half hour, for iPhone and iPad</div>
+    </header>
+
+    <nav>
+        <a href="#what">What it does</a>
+        <a href="#how">How it works</a>
+        <a href="#use">How to use it</a>
+        <a href="#rates">The rates file</a>
+        <a href="#support">Support</a>
+        <a href="privacy.html">Privacy</a>
+    </nav>
+
+    <section id="what">
+        <h2>What it does</h2>
+        <p>Halfhour shows every Irish supplier's dynamic electricity price for every half hour of today and tomorrow, and tells you the cheapest time to run the dryer, the dishwasher or charge the car.</p>
+        <p>It is for households on a dynamic tariff, or thinking of moving to one. Each supplier's own app shows its own price alone. Halfhour works out all of them side by side, so you can see where your price is going and how the suppliers compare.</p>
+        <p>It covers Electric Ireland, Energia, Bord Gáis Energy, Yuno Energy and PrePayPower. It compares dynamic tariffs only. Standard and time-of-use plans are not included.</p>
+        <p>No account, no ads, no tracking.</p>
+    </section>
+
+    <section id="how">
+        <h2>How it works</h2>
+        <h3>The price you pay</h3>
+        <p>The Commission for Regulation of Utilities, the CRU, sets one structure for every Irish dynamic tariff. Each half hour's unit price has three parts:</p>
+        <ul>
+            <li><strong>The wholesale price</strong>, the same for every supplier, from the day-ahead market. The CRU caps this part at 50c per kWh.</li>
+            <li><strong>Your supplier's base rate</strong> for the band the half hour falls in, night, day or the 17:00 to 19:00 peak. Some suppliers charge one rate all day.</li>
+            <li><strong>VAT</strong> at 9%.</li>
+        </ul>
+        <div class="formula">price = (wholesale, capped at 50c + base rate) × 1.09</div>
+        <p>A daily standing charge comes on top, whatever you use. The wholesale part has no floor, so a price below zero takes money off your bill.</p>
+        <h3>Where the wholesale price comes from</h3>
+        <p>Each morning the power exchange for the island of Ireland, SEMOpx, holds an auction for every half hour of the next day. The results are published around midday, which is when tomorrow fills in. Halfhour reads them from SEMOpx's public reports on your phone.</p>
+        <p>The market's day runs from 23:00 to 23:00 Irish time, so the first rows of tomorrow are tonight, from 23:00.</p>
+        <h3>Why prices swing</h3>
+        <p>Wind costs almost nothing to run once it is built, while gas plants pay for fuel and carbon. When it is windy and demand is low, prices fall towards zero. When the wind drops, or demand peaks in the evening, gas sets the price and it climbs. Halfhour shows EirGrid's wind figures beside the prices so you can see the two together.</p>
+        <h3>Supplier rates</h3>
+        <p>Each supplier's base rates and standing charges come from its own published price list. They are kept in a rates file published on this site, described <a href="#rates">below</a>, so a supplier's change reaches the app without an app update.</p>
+    </section>
+
+    <section id="use">
+        <h2>How to use it</h2>
+        <h3>Setup</h3>
+        <p>On first launch, accept the disclaimer and either tap <strong>Use Averages and Start</strong>, or tell Halfhour about your home: urban or rural, your yearly usage or your ESB Networks smart meter file, your supplier and the appliances you want to plan. Everything can be changed later in Settings.</p>
+        <h3>Today</h3>
+        <ul>
+            <li>Your supplier's price right now, with a plain verdict, cheap, normal or dear, and when the next cheap stretch begins.</li>
+            <li>A card for each appliance with its best start and how long it runs, such as "Start 02:30 tomorrow, for 2h 43m, cost about €3.82". It says "Start now" once the best time has come.</li>
+            <li>Tap a card to set the appliance's figures and limits: Ready By, Earliest Start and Allowed Hours. Remind Me sets a notification for the best start.</li>
+            <li>Add an appliance with the + button: car, tumble dryer, washing machine, dishwasher, immersion, or your own.</li>
+        </ul>
+        <h3>Half Hours</h3>
+        <ul>
+            <li>A colour strip of every half hour, one column per supplier, green for cheap and red for dear, with the price in every cell. The current half hour is outlined and past ones are dimmed.</li>
+            <li>Tap a cell to see the wholesale price, the supplier's rate and the VAT behind it.</li>
+            <li>Switch between Today, Tomorrow and Analysis. Analysis explains the day: where your price goes, how the wholesale price moves and what the wind is doing, then how prices work.</li>
+        </ul>
+        <h3>Charts</h3>
+        <p>Every supplier on one chart for today, tomorrow, seven days or thirty, or the same figures as a table. Tap a supplier's chip to hide or show its line. Hold and drag across the chart to read each line at that half hour.</p>
+        <h3>Compare</h3>
+        <p>What a year would cost on each dynamic tariff for your usage. <strong>Shifted</strong> moves your appliances to their cheapest times so you can see the difference. Pull down to check for new prices and rates.</p>
+        <h3>Settings</h3>
+        <ul>
+            <li>Choose your supplier, which suppliers are shown and their order.</li>
+            <li>Turn on Spike Alert to be warned half an hour before a half hour above your chosen price.</li>
+            <li>In Supplier Rates, open a supplier to see the rates in use and a link to its price list. You can check a rate against your supplier's own app: enter the price it shows for the current half hour and Halfhour works out the base rate, and keeps your figure if it differs.</li>
+        </ul>
+        <h3>Widget</h3>
+        <p>Add the Best Time Today widget to your Home Screen or Lock Screen, then edit it to choose an appliance. It shows that appliance's cheapest start today and how long it runs.</p>
+    </section>
+
+    <section id="rates">
+        <h2>The rates file</h2>
+        <p>The supplier rates Halfhour uses are published as a single JSON file:</p>
+        <p><a href="tariffs.json"><code>https://fractaldoctor.github.io/Halfhour/tariffs.json</code></a></p>
+        <p>The figures are taken from each supplier's own published price list, linked from the file, and updated when a supplier changes its prices. Halfhour checks for a newer file every few hours. It uses a file only if it reads correctly and its figures are plausible, and falls back to the rates built into the app if this site cannot be reached.</p>
+        <h3>What it holds</h3>
+        <table>
+            <tr><th>Field</th><th>Meaning</th></tr>
+            <tr><td><code>vatRate</code></td><td>VAT on electricity, 0.09 for 9%</td></tr>
+            <tr><td><code>capCents</code></td><td>The CRU's cap on the wholesale part, in cents per kWh</td></tr>
+            <tr><td><code>readOn</code></td><td>The date the file was last updated</td></tr>
+            <tr><td><code>suppliers</code></td><td>One entry per supplier</td></tr>
+            <tr><td><code>bands</code></td><td>Each band's name, start and end in minutes after midnight, and base rate in cents per kWh, excluding VAT</td></tr>
+            <tr><td><code>standingUrban</code>, <code>standingRural</code></td><td>Standing charges in euro a year, excluding VAT</td></tr>
+            <tr><td><code>extraCharges</code></td><td>Other yearly charges, such as the PSO levy, excluding VAT</td></tr>
+            <tr><td><code>sourceURL</code></td><td>The supplier's own price list</td></tr>
+            <tr><td><code>readOn</code> on a supplier</td><td>The date that supplier's figures were read</td></tr>
+        </table>
+        <p class="note">Rates in the file exclude VAT. Always check the price in your supplier's own app before you rely on it.</p>
+    </section>
+
+    <section id="support">
+        <h2>Support</h2>
+        <p>Halfhour is developed and maintained by a single developer. If you need help or want to suggest an improvement:</p>
+        <ul>
+            <li><a href="https://github.com/FractalDoctor/Halfhour/issues/new?labels=question&title=Question:+">Ask a question</a>, about the app or the prices</li>
+            <li><a href="https://github.com/FractalDoctor/Halfhour/issues/new?labels=bug&title=Bug:+">Report a bug</a>, something not working as expected</li>
+            <li><a href="https://github.com/FractalDoctor/Halfhour/issues/new?labels=rates&title=Rates:+">Report a rate</a>, a supplier figure that looks out of date</li>
+            <li><a href="https://github.com/FractalDoctor/Halfhour/issues/new?labels=enhancement&title=Feature:+">Request a feature</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Please note</h2>
+        <p>Halfhour estimates prices and costs to help you plan. It is not your bill and it is not your supplier. Prices are worked out from the published day-ahead market price, the regulator's cap and each supplier's published rates as last read, and can be wrong or out of date. Always check the price in your supplier's app before you charge a car, run an appliance or switch supplier.</p>
+        <p>Halfhour is an independent comparison. It is not affiliated with, endorsed by or connected to any electricity supplier, SEMOpx, EirGrid, SONI, ESB Networks or the CRU. Supplier names and trademarks belong to their owners and are used only to identify them. Day-ahead prices from SEMOpx. Wind data supported by EirGrid Group Data.</p>
+    </section>
+
+    <footer>
+        <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="https://github.com/FractalDoctor/Halfhour/issues">Support &amp; Issues</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halfhour - Privacy Policy</title>
+    <style>
+        :root { --page: #F3F5F4; --card: #FFFFFF; --ink: #2E3A40; --soft: #5E6B72; --accent: #1F5F8B; }
+        @media (prefers-color-scheme: dark) {
+            :root { --page: #1C1C1E; --card: #2C2C2E; --ink: #D9DFE2; --soft: #9AA5AB; --accent: #5B9BD5; }
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--page); color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px; line-height: 1.55; padding: 32px 20px 48px; max-width: 760px; margin: 0 auto;
+        }
+        header { text-align: center; padding-bottom: 20px; }
+        h1 { font-size: 26px; }
+        .updated { color: var(--soft); font-size: 14px; margin-top: 4px; }
+        section { background: var(--card); border-radius: 16px; padding: 18px 22px; margin-bottom: 14px; }
+        h2 { font-size: 18px; margin-bottom: 8px; }
+        p { margin-bottom: 10px; }
+        ul { margin: 0 0 10px 20px; }
+        li { margin-bottom: 4px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        code { font-family: "SF Mono", Menlo, monospace; font-size: 14px; }
+        footer { text-align: center; font-size: 14px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Halfhour Privacy Policy</h1>
+        <div class="updated">Last updated: 25 October 2026</div>
+    </header>
+
+    <section>
+        <h2>Data collection</h2>
+        <p>Halfhour does not collect, store or send any personal data. It needs no account, login or registration, and it never asks for your name, email, MPRN or location.</p>
+    </section>
+
+    <section>
+        <h2>Network requests</h2>
+        <p>Halfhour makes HTTPS requests to these public sources and no others:</p>
+        <ul>
+            <li><code>reports.semopx.com</code>, the day-ahead electricity prices published by SEMOpx</li>
+            <li><code>www.vargen.smartgriddashboard.com</code>, EirGrid's wind output and forecast</li>
+            <li><code>fractaldoctor.github.io</code>, this site, for the supplier rates file</li>
+        </ul>
+        <p>The widget makes the same SEMOpx request when the app has not already fetched the day's prices. These requests carry no information about you, and no keys or credentials. A link you tap yourself, such as a supplier's price list or the App Store, opens in Safari or the App Store.</p>
+    </section>
+
+    <section>
+        <h2>Data kept on your device</h2>
+        <ul>
+            <li>Cached prices for the last 30 days, the supplier rates in use, and any rates you confirm yourself.</li>
+            <li>Your settings and appliances, shared with the Halfhour widget through the app's own App Group on the same device.</li>
+            <li>If you import an ESB Networks smart meter file, a summary of your average day. The file itself and the summary never leave your phone.</li>
+        </ul>
+        <p>Nothing is stored in iCloud or shared with other apps. Deleting the app deletes all of it.</p>
+    </section>
+
+    <section>
+        <h2>Notifications</h2>
+        <p>Reminders and spike alerts are local notifications scheduled on your phone. No notification server is involved.</p>
+    </section>
+
+    <section>
+        <h2>Tips</h2>
+        <p>Tips are optional in-app purchases handled entirely by Apple. Halfhour never sees your payment details and learns only that a purchase completed.</p>
+    </section>
+
+    <section>
+        <h2>Analytics and tracking</h2>
+        <p>Halfhour contains no analytics, crash reporting, advertising or tracking code, and no third-party code that collects data.</p>
+    </section>
+
+    <section>
+        <h2>Children</h2>
+        <p>Halfhour collects no personal information from anyone, including children.</p>
+    </section>
+
+    <section>
+        <h2>Changes</h2>
+        <p>If this policy changes, the new version will be posted at this address. The app will not change how it handles data without a matching update here.</p>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>For questions about this policy or the app, open an issue on <a href="https://github.com/FractalDoctor/Halfhour/issues">GitHub</a>.</p>
+    </section>
+
+    <footer><a href="index.html">&larr; Back to Halfhour</a></footer>
+</body>
+</html>
