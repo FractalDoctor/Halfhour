@@ -1,0 +1,95 @@
+{
+  "vatRate": 0.09,
+  "capCents": 50,
+  "readOn": "2026-10-25",
+  "suppliers": [
+    {
+      "id": "electric-ireland",
+      "name": "Electric Ireland",
+      "planName": "Dynamic",
+      "bands": [
+        { "name": "Peak", "start": 1020, "end": 1140, "rate": 20.69 },
+        { "name": "Night", "start": 1380, "end": 480, "rate": 7.82 },
+        { "name": "Day", "start": 480, "end": 1380, "rate": 18.17 }
+      ],
+      "standingUrban": 301.45,
+      "standingRural": 367.41,
+      "extraCharges": [],
+      "export": null,
+      "sourceURL": "https://www.electricireland.ie/residential/electricity-and-gas/dynamic-price-plans",
+      "readOn": "2026-10-25",
+      "verified": true,
+      "notes": ["Band times assumed from the standard smart bands and not yet read from Electric Ireland's page."]
+    },
+    {
+      "id": "energia",
+      "name": "Energia",
+      "planName": "Dynamic",
+      "bands": [
+        { "name": "Peak", "start": 1020, "end": 1140, "rate": 21.03 },
+        { "name": "Night", "start": 1380, "end": 480, "rate": 11.48 },
+        { "name": "Day", "start": 480, "end": 1380, "rate": 20.16 }
+      ],
+      "standingUrban": 275.00,
+      "standingRural": 349.25,
+      "extraCharges": [],
+      "export": null,
+      "sourceURL": "https://www.energia.ie/about-energia/our-tariffs",
+      "readOn": "2026-10-25",
+      "verified": true,
+      "notes": ["Band times assumed from the standard smart bands and not yet read from Energia's page."]
+    },
+    {
+      "id": "bord-gais",
+      "name": "Bord Gáis Energy",
+      "planName": "Smart Dynamic",
+      "bands": [
+        { "name": "All day", "start": 0, "end": 1440, "rate": 17.45 }
+      ],
+      "standingUrban": 318.86,
+      "standingRural": 378.94,
+      "extraCharges": [ { "name": "PSO Levy", "annual": 6.12 } ],
+      "export": null,
+      "sourceURL": "https://www.bordgaisenergy.ie/home/our-tariffs",
+      "readOn": "2026-10-25",
+      "verified": true,
+      "notes": []
+    },
+    {
+      "id": "yuno",
+      "name": "Yuno Energy",
+      "planName": "Dynamic",
+      "bands": [
+        { "name": "Peak", "start": 1020, "end": 1140, "rate": 25.19 },
+        { "name": "Night", "start": 1380, "end": 480, "rate": 10.35 },
+        { "name": "Day", "start": 480, "end": 1380, "rate": 22.74 }
+      ],
+      "standingUrban": 364.58,
+      "standingRural": 408.40,
+      "extraCharges": [ { "name": "PSO Levy", "annual": 6.12 } ],
+      "export": { "start": 300, "end": 1320, "paysDynamic": true },
+      "sourceURL": "https://yunoenergy.ie/pricing-page",
+      "readOn": "2026-10-25",
+      "verified": true,
+      "notes": []
+    },
+    {
+      "id": "prepaypower",
+      "name": "PrePayPower",
+      "planName": "Prepay Dynamic",
+      "bands": [
+        { "name": "Peak", "start": 1020, "end": 1140, "rate": 25.19 },
+        { "name": "Night", "start": 1380, "end": 480, "rate": 10.35 },
+        { "name": "Day", "start": 480, "end": 1380, "rate": 22.74 }
+      ],
+      "standingUrban": 364.58,
+      "standingRural": 408.40,
+      "extraCharges": [ { "name": "Prepayment Service Charge", "annual": 150.83 }, { "name": "PSO Levy", "annual": 17.52 } ],
+      "export": { "start": 300, "end": 1320, "paysDynamic": true },
+      "sourceURL": "https://www.prepaypower.ie/why-switch/pricing/rates",
+      "readOn": "2026-10-25",
+      "verified": true,
+      "notes": []
+    }
+  ]
+}
